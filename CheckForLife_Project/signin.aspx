@@ -6,7 +6,6 @@
     <title>Signin</title>
     <link rel="stylesheet" href="Content/signin.css">
     <link rel="stylesheet" href="Content/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -27,7 +26,7 @@
                     <input type="password" id="confirmPassword" placeholder="ConfirmPassword" required>
                     <button type="submit">Register</button>
                     <button type="button" class="back-button" onclick="history.back()">
-                        <i class="fas fa-arrow-left"></i> BACK
+                        <i class="fa fa-arrow-left"></i> BACK
                     </button>
                 </form>
             </div>

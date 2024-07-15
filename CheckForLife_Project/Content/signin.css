@@ -73,19 +73,24 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-
-
     .login-box button:hover {
         background-color: white;
         color: black;
     }
+
 .login-box .back-button {
     background-color: yellow;
     color: black;
     margin-top: 10px;
 }
 
-    .login-box .back-button:hover {
-        background-color: #FFD700;
-        color: black;
-    }
+.back-button:hover {
+    background-color: #FFD700;
+    color: white;
+}
+
+.back-button:active, .back-button:focus {
+    background-color: white;
+    color: black;
+    outline: none; /* To remove the default focus outline */
+}
