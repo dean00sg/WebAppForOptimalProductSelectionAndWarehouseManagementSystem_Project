@@ -1,0 +1,91 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.container1 {
+    background: #2ea888;
+    padding: 20px;
+    border-radius: 20px;
+    width: auto;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+.login-box h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+    background-color: #157b92;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+    .login-box button:hover {
+        background-color: white;
+        color: black;
+    }
+.login-box .back-button {
+    background-color: yellow;
+    color: black;
+    margin-top: 10px;
+}
+
+    .login-box .back-button:hover {
+        background-color: #FFD700;
+        color: black;
+    }

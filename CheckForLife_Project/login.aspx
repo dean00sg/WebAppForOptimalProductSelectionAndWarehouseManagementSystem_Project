@@ -19,6 +19,7 @@
                     <input type="text" placeholder="User/Email" required>
                     <input type="password" placeholder="Password" required>
                     <button type="submit">LOGIN</button>
+                    <button type="button" style="background-color:#14b8d7" onclick="location.href='signin.aspx'">SIGN IN</button>
                 </form>
             </div>
         </div>
