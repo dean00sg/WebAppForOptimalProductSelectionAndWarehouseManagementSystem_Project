@@ -157,14 +157,12 @@ header {
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+h2 {
+    font-weight: bold;
+}
+
+h {
+    font-style: italic;
 }
 
 @media (max-width: 768px) {
