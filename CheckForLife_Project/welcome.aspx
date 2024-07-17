@@ -77,7 +77,7 @@
             }
         }
         function openProfile() {
-            window.location.href = 'login.aspx';
+            window.location.href = 'profile.aspx';
         }
     </script>
 </body>
