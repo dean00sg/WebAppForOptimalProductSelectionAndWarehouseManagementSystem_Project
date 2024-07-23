@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="Content/profile.css">
+    <link rel="stylesheet" href="Content/font-awesome.min.css">
 </head>
 <body>
 
@@ -15,15 +16,15 @@
     <h1>PROFILE</h1>
     <div class="profile-container1">                                             
         <div class="profile-item">
-            <label>ชื่อ-นามสกุล:</label>
-            <span id="name">ชื่อ นามสกุล</span>
+            <label>FristName-LastName:</label>
+            <span id="name">FristName-LastName</span>
         </div>
         <div class="profile-item">
-            <label>วันเกิด:</label>
-            <span id="birthdate">วันที่/เดือน/ปี</span>
+            <label>Date Of Birth:</label>
+            <span id="birthdate">Date Of Birth</span>
         </div>
         <div class="profile-item">
-            <label>อายุ:</label>
+            <label>Age:</label>
             <span id="age"></span>
         </div>
         <div class="profile-item">
@@ -31,10 +32,11 @@
             <span id="email">email@example.com</span>
         </div>
         <div class="profile-item">
-            <label>เบอร์โทร:</label>
+            <label>Tell-Phone:</label>
             <span id="phone">012-345-6789</span>
         </div>
      </div>
+    
 </div>
 <div class="back-button-container">
     <button type="button" class="back-button" onclick="history.back()">
@@ -44,7 +46,7 @@
 
 <script>
     // ตั้งค่าข้อมูลโปรไฟล์
-    const name = "Burhanurdin Sa-ongS";
+    const name = "Burhanurdin Sa-ong";
     const birthdate = "2002-03-31";
     const email = "email@example.com";
     const phone = "012-345-6789";
@@ -59,12 +61,10 @@
             age--;
         }
         return age;
-    }
-
-    // อัปเดตข้อมูลในหน้า HTML
+    };
     document.getElementById('name').textContent = name;
     document.getElementById('birthdate').textContent = birthdate;
-    document.getElementById('age').textContent = calculateAge(birthdate) + " ปี";
+    document.getElementById('age').textContent = calculateAge(birthdate) + " years old";
     document.getElementById('email').textContent = email;
     document.getElementById('phone').textContent = phone;
 </script>
