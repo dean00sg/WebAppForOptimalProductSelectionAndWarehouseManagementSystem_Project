@@ -1,35 +1,18 @@
-﻿<!DOCTYPE html>
+﻿<!-- main HTML file -->
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
-    <link rel="stylesheet" href="Content/welcome.css">
+    <link rel="stylesheet" href="Content/welcome.css">             
     <link rel="stylesheet" href="Content/font-awesome.min.css">
+
 </head>
 <body>
-    <header>
-        <div class="app-bar">
-            <div class="menu-icon" onclick="toggleSidebar()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="profile-icon">
-                <i class="fa fa-user-circle" onclick="openProfile()"> </i>
-            </div>
-        </div>
-    </header>
-    
-    <div class="sidebar" id="sidebar">
-        <div class="container-bar">
-            <a href="javascript:void(0)" onclick="toggleSidebar()"><i class="fa fa-eye-slash"></i> Close</a>
-            <a href="#request"><i class="fa fa-book"></i> Check Information</a>
-            <a href="#seller"><i class="fa fa-heartbeat"></i> Health Lovers</a>
-            <a href="#promotion"><i class="fa fa-cart-plus"></i> Save and Promotion</a>
-        </div>
-    </div>
-    
+    <!-- แท็กสำหรับโหลด header.html -->
+    <div id="header-container"></div>
+
     <div class="container-title">
         <div class="box box0">
             <img src="Images/logo.png" alt="Logo">
@@ -67,18 +50,31 @@
                 โปรโมชั่นวันที่ 22 มิ.ย. 66 - 19 ก.ค 66   *จำกัด 1 สิทธิ์ ต่อ 1 ใบเสร็จ/ราคาจะหักส่วนลดเพิ่มเติมอีก หลังจากเพิ่มสินค้าลงในตะกร้า</h>
         </div>
     </div>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar.style.left === '-300px') {
-                sidebar.style.left = '0';
-            } else {
-                sidebar.style.left = '-300px';
-            }
-        }
-        function openProfile() {
-            window.location.href = 'profile.aspx';
-        }
-    </script>
+
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('header.aspx')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Insert HTML into the page
+                document.getElementById('header-container').innerHTML = data;
+
+                const scriptTags = document.querySelectorAll('#header-container script');
+                scriptTags.forEach(script => {
+                    const newScript = document.createElement('script');
+                    newScript.text = script.text;
+                    document.body.appendChild(newScript);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    });
+</script>
 </html>
